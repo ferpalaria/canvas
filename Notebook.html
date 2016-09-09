@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="refresh" content="1"/>
+  <script type="application/javascript">
+    function draw() {
+      var canvas = document.getElementById("canvas");
+      var ctx = canvas.getContext("2d");
+
+        <!-- Monitor -->
+        ctx.beginPath();
+		ctx.moveTo(200, 80);
+		ctx.lineTo(470, 80);
+		ctx.lineTo(470, 280);
+        ctx.lineTo(200, 280);
+		ctx.fillStyle="rgb(112,109,109)";
+		ctx.closePath();
+		ctx.fill();
+        
+        <!-- Tela -->
+        ctx.beginPath();
+		ctx.moveTo(230, 110);
+		ctx.lineTo(440, 110);
+		ctx.lineTo(440, 250);
+        ctx.lineTo(230, 250);
+		ctx.fillStyle="rgb(55,55,55)";
+		ctx.closePath();
+		ctx.fill();
+        
+        <!-- Base do Teclado -->
+        ctx.beginPath();
+		ctx.moveTo(200, 280);
+		ctx.lineTo(470, 280);
+		ctx.lineTo(390, 400);
+        ctx.lineTo(120, 400);
+		ctx.fillStyle="rgb(97,95,95)";
+		ctx.closePath();
+		ctx.fill();
+        
+        <!-- Teclado -->
+        ctx.beginPath();
+		ctx.moveTo(220, 310);
+		ctx.lineTo(440-30, 310);
+		ctx.lineTo(390-20, 400-30);
+        ctx.lineTo(120+60, 400-30);
+		ctx.fillStyle="rgb(150,150,150)";
+		ctx.closePath();
+		ctx.fill();
+       
+        <!-- Base frontal teclado -->
+        ctx.beginPath();
+		ctx.moveTo(120, 400);
+		ctx.lineTo(390, 400);
+		ctx.lineTo(390, 415);
+        ctx.lineTo(120, 415);
+		ctx.fillStyle="rgb(112,109,109)";
+		ctx.closePath();
+		ctx.fill();
+        
+        <!-- Botoes da base do teclado -->
+        ctx.beginPath();
+		ctx.moveTo(150, 405);
+		ctx.lineTo(160, 405);
+		ctx.lineTo(160, 410);
+        ctx.lineTo(150, 410);
+		ctx.fillStyle="red";
+		ctx.closePath();
+		ctx.fill();
+       
+	   ctx.beginPath();
+		ctx.moveTo(165, 405);
+		ctx.lineTo(175, 405);
+		ctx.lineTo(175, 410);
+        ctx.lineTo(165, 410);
+		ctx.fillStyle="green";
+		ctx.closePath();
+		ctx.fill();
+        
+        <!-- Lateral do teclado -->
+        ctx.beginPath();
+	    ctx.lineTo(390, 400);
+        ctx.lineTo(390, 415);
+		ctx.lineTo(470, 280+15);
+        ctx.lineTo(470, 280);
+		ctx.fillStyle="rgb(97,95,95)";
+		ctx.closePath();
+		ctx.fill();
+        
+	}
+  </script>
+ </head>
+ <body onload="draw();">
+   <canvas id="canvas" width="1200" height="1200"></canvas>
+ </body>
+</html>

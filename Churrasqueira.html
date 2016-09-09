@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="refresh" content="10"/>
+  <script type="application/javascript">
+    function draw() {
+      var canvas = document.getElementById("canvas");
+      var ctx = canvas.getContext("2d");
+        var ajuste = 10;
+        
+        <!-- Chaminé -->
+        ctx.beginPath();
+		ctx.moveTo(200, 80+ajuste);
+		ctx.lineTo(300, 80+ajuste);
+		ctx.lineTo(320, 120+ajuste);
+        ctx.lineTo(180, 120+ajuste);
+		ctx.fillStyle="rgb(112,109,109)";
+		ctx.closePath();
+		ctx.fill();
+        
+        
+         <!-- Cano Chaminé -->
+        ctx.beginPath();
+		ctx.moveTo(200+25, 130);
+		ctx.lineTo(300-25, 130);
+		ctx.lineTo(300-25, 120+70);
+        ctx.lineTo(300-25-50, 120+70);
+		ctx.fillStyle="red";
+		ctx.closePath();
+		ctx.fill();
+       
+        
+        <!-- Telhado  Chaminé -->
+       ctx.beginPath();
+		ctx.moveTo(225, 120+50+20);
+		ctx.lineTo(325-50, 190);
+		ctx.lineTo(370, 240+30);
+        ctx.lineTo(130, 240+30);
+		ctx.fillStyle="red";
+		ctx.closePath();
+		ctx.fill();
+           
+        
+        <!-- Tijolinhos -->
+        ctx.beginPath();
+		ctx.moveTo(130, 270);
+		ctx.lineTo(370, 270);
+		ctx.lineTo(370, 650);
+        ctx.lineTo(130, 650);
+		ctx.fillStyle="rgb(112,109,109)";
+		ctx.closePath();
+		ctx.fill();
+        
+           <!-- Embaixo da churarsqueira  -->
+        ctx.beginPath();
+	    ctx.clearRect(180, 580, 140, 650);
+		        
+            <!-- Embaixo da churarsqueira  -->
+        ctx.beginPath();
+	    ctx.clearRect(180, 450, 140, 50);
+		   
+        
+           <!-- Boca da CHurrasqueira -->
+        ctx.beginPath();
+		ctx.moveTo(180, 320);
+		ctx.lineTo(320, 320);
+		ctx.lineTo(320, 450);
+        ctx.lineTo(180, 450);
+		ctx.fillStyle="green";
+		ctx.closePath();
+		ctx.fill();
+        
+     
+	}
+  </script>
+ </head>
+ <body onload="draw();">
+   <canvas id="canvas" width="500" height="1200"></canvas>
+ </body>
+</html>

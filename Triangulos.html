@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" http-equiv="refresh" content="1"/>
+  <script type="application/javascript">
+    function draw() {
+      var canvas = document.getElementById("canvas");
+      if (canvas.getContext) {
+        var ctx = canvas.getContext("2d");
+		
+		ctx.beginPath();
+		ctx.moveTo(200, 80);
+		ctx.lineTo(300, 250);
+		ctx.lineTo(100, 250);
+		ctx.fillStyle="blue";
+		ctx.closePath();
+		ctx.fill();
+		
+		
+		ctx.beginPath();
+		ctx.moveTo(100, 130);
+		ctx.lineTo(300, 130);
+		ctx.lineTo(200, 300);
+		ctx.fillStyle="rgba(255,255,250,0.5)";
+		ctx.closePath();
+		ctx.fill();
+		
+		ctx.beginPath();
+		ctx.moveTo(200,130);
+		ctx.lineTo(250,215);
+		ctx.lineTo(150,215);
+		ctx.fillStyle= "rgba(255,255,250,0.5)";
+		//ctx.fillStyle="white";
+		ctx.closePath();
+		ctx.fill();
+	
+		
+
+	
+	     }
+    }
+  </script>
+ </head>
+ <body onload="draw();">
+   <canvas id="canvas" width="400" height="400"></canvas>
+   
+ </body>
+</html>
